@@ -1,0 +1,30 @@
+{
+  "name": "dbximgs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "engines": {
+    "node": "~8.2.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.4",
+    "debug": "^2.6.9",
+    "dependencies": "0.0.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "express-sessions": "^1.0.6",
+    "hbs": "^4.0.6",
+    "helmet": "^3.21.2",
+    "morgan": "^1.8.2",
+    "node-cache": "^4.2.1",
+    "redis": "^2.8.0",
+    "redis-server": "^1.2.2",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5",
+    "serve-favicon": "^2.4.5"
+  }
+}

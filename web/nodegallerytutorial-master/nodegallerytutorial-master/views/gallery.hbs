@@ -1,0 +1,58 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<script src="/galleria/galleria-1.5.7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
+	<script type='text/javascript' src='/javascripts/page.js'></script>
+	<link rel="stylesheet" href="/stylesheets/page.css">
+</head>
+<body>
+
+<div class="topnav">
+  <a class = "active" href="upload/?{{path}}"> + </a>
+  <a href="createfolder/?New Album">Create Album</a>
+  <a href="{{del}}">Delete Album</a>
+  <a href="http://localhost:3000/logout">Logout</a>
+
+</div>
+<script src = '/javascripts/page.js' type="text/x-handlebars-template">
+   <div>
+     <input type='file' accept='image/*' onchange='openFile(event)'><br>
+   </div>
+</script>
+
+<div>
+		{{#each curr}}
+            <a href={{this}}>
+                <button class="btn1"><img src = "/images/img2.png" width="30", height="30">{{@key}}</button>
+            </a>
+		{{/each}}
+    {{#each folders}}
+            <a href={{this}}>
+                <button class="btn"><img src = "/images/img2.png" width="30", height="30">{{@key}}</button>
+            </a>
+		{{/each}}
+
+	</div>
+    <div>
+        {{#each empty}}
+		<img src="{{this}}" height="600">
+
+		{{/each}}
+    </div>
+	<div class="galleria">
+		{{#each imgs}}
+            <a href = {{this}}>
+		<img src="{{this}}" >
+            </a>
+        {{/each}}
+	</div>
+</body>
+</html>
